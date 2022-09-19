@@ -1,0 +1,100 @@
+cmake_minimum_required(VERSION 3.20)
+project(C_CPP_Utils_Library C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(I2C_Lcd_Library/Core/Inc)
+include_directories(I2C_Lcd_Library/Drivers/CMSIS)
+include_directories(I2C_Lcd_Library/Drivers/CMSIS/Device)
+include_directories(I2C_Lcd_Library/Drivers/CMSIS/Device/ST)
+include_directories(I2C_Lcd_Library/Drivers/CMSIS/Device/ST/STM32F4xx)
+include_directories(I2C_Lcd_Library/Drivers/CMSIS/Device/ST/STM32F4xx/Include)
+include_directories(I2C_Lcd_Library/Drivers/CMSIS/Include)
+include_directories(I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc)
+include_directories(I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy)
+
+add_executable(C_CPP_Utils_Library
+        I2C_Lcd_Library/Core/Inc/gpio.h
+        I2C_Lcd_Library/Core/Inc/i2c.h
+        I2C_Lcd_Library/Core/Inc/main.h
+        I2C_Lcd_Library/Core/Inc/stm32f4xx_hal_conf.h
+        I2C_Lcd_Library/Core/Inc/stm32f4xx_it.h
+        I2C_Lcd_Library/Core/Src/gpio.c
+        I2C_Lcd_Library/Core/Src/i2c.c
+        I2C_Lcd_Library/Core/Src/main.c
+        I2C_Lcd_Library/Core/Src/stm32f4xx_hal_msp.c
+        I2C_Lcd_Library/Core/Src/stm32f4xx_it.c
+        I2C_Lcd_Library/Core/Src/syscalls.c
+        I2C_Lcd_Library/Core/Src/sysmem.c
+        I2C_Lcd_Library/Core/Src/system_stm32f4xx.c
+        I2C_Lcd_Library/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+        I2C_Lcd_Library/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+        I2C_Lcd_Library/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/cmsis_armcc.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/cmsis_armclang.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/cmsis_compiler.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/cmsis_gcc.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/cmsis_iccarm.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/cmsis_version.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_armv8mbl.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_armv8mml.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm0.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm0plus.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm1.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm23.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm3.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm33.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm4.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_cm7.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_sc000.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/core_sc300.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/mpu_armv7.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/mpu_armv8.h
+        I2C_Lcd_Library/Drivers/CMSIS/Include/tz_context.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_i2c.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+        I2C_Lcd_Library/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)
