@@ -1,3 +1,0 @@
-D:/Project_CLion/C_CPP_Utils_Library/TestProject/TestProject/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
-D:/Project_CLion/C_CPP_Utils_Library/TestProject/TestProject/cmake-build-debug-mingw/CMakeFiles/TestProject.elf.dir
-D:/Project_CLion/C_CPP_Utils_Library/TestProject/TestProject/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
